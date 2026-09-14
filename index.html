@@ -182,7 +182,7 @@
     isolation:isolate;
     contain:layout paint style;
     will-change:transform;
-    animation:introExit 1.45s cubic-bezier(.76,0,.24,1) 9s forwards;
+    animation:introExit 0.725s cubic-bezier(.76,0,.24,1) 4.5s forwards;
   }
 
   .intro::before,
@@ -200,12 +200,12 @@
 
   .intro::before{
     top:calc(50% - 118px);
-    animation:introLine 1.25s cubic-bezier(.16,1,.3,1) .55s forwards;
+    animation:introLine 0.625s cubic-bezier(.16,1,.3,1) 0.275s forwards;
   }
 
   .intro::after{
     top:calc(50% + 118px);
-    animation:introLine 1.25s cubic-bezier(.16,1,.3,1) .78s forwards;
+    animation:introLine 0.625s cubic-bezier(.16,1,.3,1) 0.39s forwards;
   }
 
   .intro-corners{
@@ -219,7 +219,7 @@
     width:105px;
     height:105px;
     opacity:0;
-    animation:cornerIn 1.15s cubic-bezier(.16,1,.3,1) .7s forwards;
+    animation:cornerIn 0.575s cubic-bezier(.16,1,.3,1) 0.35s forwards;
   }
 
   .intro-corners span::before{
@@ -229,7 +229,7 @@
     height:18px;
     border:1px solid #443254;
     transform:rotate(45deg);
-    animation:cornerDiamond 4.2s ease-in-out 2s infinite;
+    animation:cornerDiamond 2.1s ease-in-out 1s infinite;
   }
 
   .intro-corners span::after{
@@ -239,7 +239,7 @@
     height:5px;
     border:1px solid rgba(179,139,220,.55);
     transform:rotate(45deg);
-    animation:cornerPulse 2.6s ease-in-out 1.8s infinite;
+    animation:cornerPulse 1.3s ease-in-out 0.9s infinite;
   }
 
   .intro-corners span:nth-child(1){
@@ -280,7 +280,7 @@
     z-index:4;
     transform:translateY(22px) scale(.96);
     opacity:0;
-    animation:introMark 1.45s cubic-bezier(.16,1,.3,1) 1.05s forwards;
+    animation:introMark 0.725s cubic-bezier(.16,1,.3,1) 0.525s forwards;
   }
 
   .intro-name{
@@ -294,7 +294,7 @@
     text-shadow:
       0 0 24px rgba(179,139,220,.08),
       0 0 70px rgba(179,139,220,.035);
-    animation:nameBreath 3.8s ease-in-out 2.35s infinite;
+    animation:nameBreath 1.9s ease-in-out 1.175s infinite;
   }
 
   .intro-rule{
@@ -305,7 +305,7 @@
     margin:27px auto 18px;
     background:rgba(179,139,220,.62);
     box-shadow:0 0 14px rgba(179,139,220,.12);
-    animation:introRule 1.1s cubic-bezier(.16,1,.3,1) 2.05s forwards;
+    animation:introRule 0.55s cubic-bezier(.16,1,.3,1) 1.025s forwards;
   }
 
   .intro-rule::before,
@@ -318,7 +318,7 @@
     border:1px solid rgba(179,139,220,.6);
     transform:translateY(-50%) rotate(45deg);
     opacity:0;
-    animation:ruleMarks .7s ease 2.5s forwards;
+    animation:ruleMarks 0.35s ease 1.25s forwards;
   }
   .intro-rule::before{left:-3px}
   .intro-rule::after{right:-3px}
@@ -334,7 +334,7 @@
     line-height:1.8;
     opacity:0;
     transform:translateY(10px);
-    animation:introSub 1.15s ease 2.55s forwards;
+    animation:introSub 0.575s ease 1.275s forwards;
   }
 
   .intro-glyph{
@@ -347,8 +347,8 @@
     z-index:1;
     box-shadow:0 0 80px rgba(179,139,220,.025);
     animation:
-      glyphIn 1.7s cubic-bezier(.16,1,.3,1) .35s forwards,
-      glyphFloat 6s ease-in-out 2.5s infinite;
+      glyphIn 0.85s cubic-bezier(.16,1,.3,1) 0.175s forwards,
+      glyphFloat 3s ease-in-out 1.25s infinite;
   }
 
   .intro-glyph::before,
@@ -369,7 +369,7 @@
     box-shadow:
       0 0 18px rgba(179,139,220,.32),
       0 0 50px rgba(179,139,220,.12);
-    animation:centerPulse 2.8s ease-in-out 2.3s infinite;
+    animation:centerPulse 1.4s ease-in-out 1.15s infinite;
   }
 
   .intro-orbit{
@@ -381,8 +381,8 @@
     opacity:0;
     z-index:2;
     animation:
-      orbitIn 1.4s ease 1.35s forwards,
-      orbitSpin 18s linear 2.7s infinite;
+      orbitIn 0.7s ease 0.675s forwards,
+      orbitSpin 9s linear 1.35s infinite;
   }
 
   .intro-orbit::before,
@@ -408,8 +408,8 @@
     opacity:0;
     z-index:0;
     animation:
-      auraIn 2.1s ease .9s forwards,
-      auraBreath 5.5s ease-in-out 2.4s infinite;
+      auraIn 1.05s ease 0.45s forwards,
+      auraBreath 2.75s ease-in-out 1.2s infinite;
   }
 
   .intro-aura::after{
@@ -436,15 +436,15 @@
     border-radius:50%;
     opacity:0;
     box-shadow:0 0 11px rgba(179,139,220,.7);
-    animation:starIn 1.2s ease forwards, starPulse 3.8s ease-in-out 2.2s infinite;
+    animation:starIn 0.6s ease forwards, starPulse 1.9s ease-in-out 1.1s infinite;
   }
 
-  .intro-stars i:nth-child(1){top:21%;left:24%;animation-delay:1.35s,2.5s}
-  .intro-stars i:nth-child(2){top:29%;right:22%;animation-delay:1.55s,2.9s}
-  .intro-stars i:nth-child(3){bottom:27%;left:19%;animation-delay:1.75s,3.2s}
-  .intro-stars i:nth-child(4){bottom:21%;right:25%;animation-delay:1.95s,2.6s}
-  .intro-stars i:nth-child(5){top:16%;left:50%;animation-delay:2.1s,3.5s}
-  .intro-stars i:nth-child(6){bottom:14%;left:50%;animation-delay:2.25s,3s}
+  .intro-stars i:nth-child(1){top:21%;left:24%;animation-delay:0.675s,1.25s}
+  .intro-stars i:nth-child(2){top:29%;right:22%;animation-delay:0.775s,1.45s}
+  .intro-stars i:nth-child(3){bottom:27%;left:19%;animation-delay:0.875s,1.6s}
+  .intro-stars i:nth-child(4){bottom:21%;right:25%;animation-delay:0.975s,1.3s}
+  .intro-stars i:nth-child(5){top:16%;left:50%;animation-delay:1.05s,1.75s}
+  .intro-stars i:nth-child(6){bottom:14%;left:50%;animation-delay:1.125s,1.5s}
 
   @keyframes introMark{
     0%{opacity:0;transform:translateY(22px) scale(.96)}
@@ -541,7 +541,7 @@
   .intro-lite .intro-aura{
     width:min(440px,90vw);
     height:min(440px,90vw);
-    animation:auraIn 2.1s ease .9s forwards;
+    animation:auraIn 1.05s ease 0.45s forwards;
   }
   .intro-lite .intro-name{animation:none;text-shadow:none}
   .intro-lite .intro-glyph,
@@ -557,7 +557,7 @@
   .intro-lite .intro-glyph::after{animation:none;opacity:.7}
   .intro-lite .intro-stars i{
     animation-name:starIn;
-    animation-duration:1.2s;
+    animation-duration:0.6s;
     animation-timing-function:ease;
     animation-iteration-count:1;
     animation-fill-mode:forwards;
@@ -589,7 +589,7 @@
       animation:none !important;
     }
     .intro{
-      animation:introFade .3s ease 1.4s forwards !important;
+      animation:introFade 0.15s ease 0.7s forwards !important;
     }
     .intro-mark,
     .intro-corners span{
@@ -696,8 +696,8 @@
       window.addEventListener('pagehide', finish);
       reduced.addEventListener('change', finish);
       // Rasterize the destination before the exit, outside its critical frames.
-      prepareTimer = setTimeout(prepare, reduced.matches ? 900 : 7500);
-      fallbackTimer = setTimeout(finish, reduced.matches ? 2200 : 11500);
+      prepareTimer = setTimeout(prepare, reduced.matches ? 450 : 3750);
+      fallbackTimer = setTimeout(finish, reduced.matches ? 1100 : 5750);
       if (document.hidden) finish();
     })();
   </script>
